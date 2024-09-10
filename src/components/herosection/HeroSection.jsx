@@ -53,7 +53,7 @@ const HeroSection = () => {
         <div className='herosection-name-container-top'>
 
           <div className='name-part'>
-            <h1>Hassan.</h1>
+            <h1>Raza hussain</h1>
             <span><GiHand /></span>
           </div>
 

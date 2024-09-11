@@ -1,4 +1,10 @@
 .appfile{
     background-color: rgb(231, 231, 231);
     padding: 1rem 10rem;
+    display: flex;
+    gap: 7rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    transition: all ease 0.3s;
+    flex-direction: column;
 }

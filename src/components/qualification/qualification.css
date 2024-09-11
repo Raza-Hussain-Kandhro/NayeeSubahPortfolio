@@ -1,0 +1,18 @@
+.qualification-section-bottom-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+
+
+}
+
+.qualification-section-bottom{
+    display: flex;
+}
+
+
+.qualification-section-bottom-top-individual {
+    display: flex;
+}

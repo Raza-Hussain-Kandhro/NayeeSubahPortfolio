@@ -2,23 +2,26 @@ import React from 'react'
 // import './skills.css'
 import './services.css'
 import { SiWeightsandbiases } from 'react-icons/si'
+import { FiLayout } from 'react-icons/fi'
+import { IoCodeSlash } from 'react-icons/io5'
+import { MdDesignServices } from 'react-icons/md'
 
 
 const Services = () => {
 
     const servicesData = [
         {
-            icon: <SiWeightsandbiases />,
+            icon: <FiLayout />,
             title: "Web Designer",
             shortTitle: "View More"
         },
         {
-            icon: <SiWeightsandbiases />,
+            icon: <IoCodeSlash  />,
             title: "UI/UX Designer",
             shortTitle: "View More"
         },
         {
-            icon: <SiWeightsandbiases />,
+            icon: <MdDesignServices  />,
             title: "Branding Designer",
             shortTitle: "View More"
         },
@@ -36,11 +39,11 @@ const Services = () => {
 
 
 
-            <div className='services-section-bottom' style={{display: "flex"}}>
+            <div className='services-section-bottom'>
 
                 {servicesData.map((items, index) => {
                     return (
-                        <div> 
+                        <div className='services-section-bottom-individual'>
                             <h3>{items.icon}</h3>
                             <h1>{items.title}</h1>
                             <span>{items.shortTitle}</span>

@@ -1,0 +1,42 @@
+.services-section-bottom{
+    
+    /* border: 1px solid red;/ */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.services-section-bottom-individual{
+    border: 1px solid var(--gray-color);
+
+    background-color: white;
+
+    padding: 10rem 3rem 3rem 3rem;
+    border-radius: 0.4rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    
+}
+
+
+.services-section-bottom-individual > h3 {
+    font-size: 2.6rem;
+    font-weight: 500;
+    color: var(--gray-color);
+}
+
+.services-section-bottom-individual > h1 {
+    font-size: 1.6rem;
+    color: var(--gray-color);
+    font-weight: 500;
+}
+
+.services-section-bottom-individual > span {
+    font-size: 1rem;
+    color: var(--gray-color);
+    font-weight: 400;
+}

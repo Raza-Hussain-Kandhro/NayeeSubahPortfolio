@@ -24,7 +24,7 @@ const HeroSection = () => {
     },
     {
       icon: <CiLinkedin />,
-      link: 'https://linkedin.com',
+      link: 'www.linkedin.com/in/raza-hussain-kandhro-3b02342aa',
       color: "#0A66C2"
     },
     {

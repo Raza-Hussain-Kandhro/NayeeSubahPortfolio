@@ -6,6 +6,7 @@ import HeroSection from './components/herosection/HeroSection'
 import Qualification from './components/qualification/Qualification'
 import Services from './components/services/Services'
 import Skills from './components/skills/Skills'
+import Contact from './components/contact/Contact'
 
 function App() {
 
@@ -26,7 +27,8 @@ function App() {
         <Skills />
         <Services />
         <Qualification />
-        <h1>Contact</h1>
+        <Contact />
+        
       </div>
     </>
 

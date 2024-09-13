@@ -1,18 +1,133 @@
-.qualification-section-bottom-top {
+/* Main Container for Qualification Section */
+.qualification-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Qualification Header */
+.qualification-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.qualification-header span {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Tab Buttons for Education and Experience */
+.qualification-tabs {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.qualification-tabs button {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
     align-items: center;
+    gap: 0.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.qualification-tabs button.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.qualification-tabs button:hover {
+    color: #555;
+}
+
+/* Qualification Content */
+.qualification-content {
+    position: relative;
+    display: flex;
     flex-direction: column;
-
-
-
+    align-items: center;
+    padding: 2rem 0;
+   
 }
 
-.qualification-section-bottom{
-    display: flex;
+/* Vertical Line */
+.qualification-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #333; /* Line color */
+    z-index: 1; /* Ensures line appears behind the text boxes */
 }
 
+/* Education and Experience Containers */
+.left-aligned,
+.right-aligned {
+    position: relative;
+    width: 45%;
+    padding: 1rem 0;
+    padding-right: 5rem;
+    padding-left: 2rem;
+    margin: 2rem 0; /* Add more vertical spacing between entries */
+    background-color: rgb(231, 231, 231);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    
+    z-index: 2; /* Ensures the content appears above the line */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
 
-.qualification-section-bottom-top-individual {
-    display: flex;
+/* Hover effect */
+.left-aligned:hover,
+.right-aligned:hover {
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* White text color on hover */
+}
+
+/* For left-aligned content */
+.left-aligned {
+    text-align: left;
+    margin-left: auto;
+}
+
+/* For right-aligned content */
+.right-aligned {
+    text-align: right;
+    margin-right: auto;
+}
+
+/* Dots on the Line */
+.left-aligned::before,
+.right-aligned::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: #333; /* Dot color */
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* Dot position for left-aligned */
+.left-aligned::before {
+    left: -25px; /* Adjust for gap between content and line */
+}
+
+/* Dot position for right-aligned */
+.right-aligned::before {
+    right: -25px; /* Adjust for gap between content and line */
 }

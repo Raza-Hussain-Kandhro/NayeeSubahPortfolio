@@ -1,108 +1,125 @@
-import React from 'react'
-import './qualification.css'
-import { FaHatCowboy } from 'react-icons/fa6'
-import { BsBag } from 'react-icons/bs'
+import React, { useState } from 'react';
+import './qualification.css';
+import { FaHatCowboy } from 'react-icons/fa6';
+import { BsBag } from 'react-icons/bs';
 
 const Qualification = () => {
+    const [activeTab, setActiveTab] = useState('education');
 
     const qualificationData = [
-        //EDUCATION
         {
-            mainTitle: [{
-                titleIcon: <BsBag />,
-                title: "Education"
-            }],
+            mainTitle: [
+                {
+                    titleIcon: <BsBag />,
+                    title: 'Education',
+                },
+            ],
             educationDetail: [
                 {
-                    educationName: "THE MONTESOORI SCHOOL",
-                    educationLocation: "Karachi - School",
-                    educationDuration: "2004 - 2017",
-                    leftSide: true
+                    educationName: 'THE CITIZENS FOUNDATION SCHOOL',
+                    educationLocation: 'Karachi - School',
+                    educationDuration: '2011 - 2021',
+                    leftSide: true,
                 },
                 {
-                    educationName: "GOV DEGREE COLLEGE, MAJEED SRE",
-                    educationLocation: "Karachi - Collge",
-                    educationDuration: "2017 - 2019",
-                    leftSide: false
+                    educationName: 'GOVT DEGREE COLLEGE, MALIR CANTT',
+                    educationLocation: 'Karachi - College',
+                    educationDuration: '2021 - 2023',
+                    leftSide: false,
                 },
                 {
-                    educationName: "SMIU",
-                    educationLocation: "Karachi - School",
-                    educationDuration: "2020 - 2024",
-                    leftSide: true
+                    educationName: 'DHA Suffa University',
+                    educationLocation: 'Karachi - University',
+                    educationDuration: '2023 - Present',
+                    leftSide: true,
                 },
-            ]
+            ],
         },
-
-        //EXPERIENCE
         {
             mainTitle: [
                 {
                     titleIcon: <FaHatCowboy />,
-                    title: "Experience"
-                }
+                    title: 'Experience',
+                },
             ],
             experienceDetail: [
                 {
-                    experienceTitle: "Web Designer",
-                    experienceCompany: "Freelancer",
-                    experienceDuration: "2019 - 2020",
-                    leftSide: true
+                    experienceTitle: 'Web Designer',
+                    experienceCompany: 'Freelancer',
+                    experienceDuration: '2019 - 2020',
+                    leftSide: true,
                 },
                 {
-                    experienceTitle: "Front-End Developer",
-                    experienceCompany: "Freelancer",
-                    experienceDuration: "2020 - 2021",
-                    leftSide: false
+                    experienceTitle: 'Front-End Developer',
+                    experienceCompany: 'Freelancer',
+                    experienceDuration: '2020 - 2021',
+                    leftSide: false,
                 },
                 {
-                    experienceTitle: "UI/UX Designer",
-                    experienceCompany: "Freelancer",
-                    experienceDuration: "2021 - 2022",
-                    leftSide: true
+                    experienceTitle: 'UI/UX Designer',
+                    experienceCompany: 'Freelancer',
+                    experienceDuration: '2021 - 2022',
+                    leftSide: true,
                 },
-            ]
-        }
-    ]
-
-
-
-
-
+            ],
+        },
+    ];
 
     return (
-        <div className='about-section'>
-
-            <div className='about-section-top'>
+        <div className='qualification-container'>
+            <div className='qualification-header'>
                 <h1>Qualification</h1>
                 <span>My personal journey</span>
             </div>
 
-            <div className='qualification-section-bottom'>
+            <div className='qualification-tabs'>
+                <button
+                    className={activeTab === 'education' ? 'active' : ''}
+                    onClick={() => setActiveTab('education')}
+                >
+                    <BsBag /> Education
+                </button>
+                <button
+                    className={activeTab === 'experience' ? 'active' : ''}
+                    onClick={() => setActiveTab('experience')}
+                >
+                    <FaHatCowboy /> Experience
+                </button>
+            </div>
 
-                {qualificationData.map((items, index) => {
-                    return (
-                        <div className='qualification-section-bottomm  '>
+            <div className='qualification-content'>
+                {activeTab === 'education' && (
+                    <div className='education-section'>
+                        {qualificationData[0].educationDetail.map((edu, index) => (
+                            <div
+                                key={index}
+                                className={edu.leftSide ? 'left-aligned' : 'right-aligned'}
+                            >
+                                <h3>{edu.educationName}</h3>
+                                <p>{edu.educationLocation}</p>
+                                <span>{edu.educationDuration}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
 
-                            {items.mainTitle.map((titles, index) => {
-                                return (
-                                    <div className='qualification-section-bottom-buttons'>
-                                        <div className='qualification-section-bottom-top-individual'>
-                                            <h3>{titles.titleIcon}</h3>
-                                            <h1>{titles.title}</h1>
-                                        </div>
-                                    </div>
-                                )
-                            })}
-
-                        </div>
-                    )
-                })}
-
-
+                {activeTab === 'experience' && (
+                    <div className='experience-section'>
+                        {qualificationData[1].experienceDetail.map((exp, index) => (
+                            <div
+                                key={index}
+                                className={exp.leftSide ? 'left-aligned' : 'right-aligned'}
+                            >
+                                <h3>{exp.experienceTitle}</h3>
+                                <p>{exp.experienceCompany}</p>
+                                <span>{exp.experienceDuration}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Qualification
+export default Qualification;

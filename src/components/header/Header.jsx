@@ -13,8 +13,20 @@ const Header = () => {
             link: "#about"
         },
         {
-            name: "Slills",
+            name: "Skills",
             link: "#skills"
+        },
+        {
+            name: "Services",
+            link: "#services"
+        },
+        {
+            name: "Qualification",
+            link: "#qualification"
+        },
+        {
+            name: "Contact",
+            link: "#contact"
         }
     ]
 

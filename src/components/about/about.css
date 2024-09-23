@@ -104,6 +104,6 @@
     gap: 2rem;
 }
 
-.about-section-bottom-right-bottom{
-    
+.about-section-bottom-right>a{
+    text-decoration: none;
 }

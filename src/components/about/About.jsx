@@ -70,7 +70,9 @@ const About = () => {
             <button>Download Cv <FiFile /></button>
           </div> */}
 
-          <Buttons btnTitle="Download CV" btnIcon={<FiFile />}/>
+          <a href="/cv.jpeg" download="RazaHussainCV.jpeg">
+          <Buttons btnTitle="Download CV" btnIcon={<FiFile />} />
+          </a>
 
 
         </div>

@@ -37,7 +37,7 @@ const Contact = () => {
           <div className="contact-item">
             <FaFacebookMessenger className="contact-icon" />
             <div className="contact-details">
-              <a href="https://m.me/razahussainkandhro" target="_blank" rel="noopener noreferrer">Raza Hussain Kandhro</a>
+              <a href="https://m.me/razahussainkandhro1" target="_blank" rel="noopener noreferrer">Raza Hussain Kandhro</a>
               <p>Write me <FaArrowRight className="arrow-icon" /></p>
             </div>
           </div>

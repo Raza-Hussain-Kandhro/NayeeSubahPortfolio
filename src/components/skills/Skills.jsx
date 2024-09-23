@@ -33,7 +33,7 @@ const Skills = () => {
             skillSetRight: [
                 { language: "Firebase", experience: "Basic" },
                 { language: "Python", experience: "Advanced" },
-                { language: "Django", experience: "Basic" },
+                { language: "Django", experience: "Basicc" },
             ]
         }
     ];

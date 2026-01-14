@@ -8,3 +8,14 @@
     transition: all ease 0.3s;
     flex-direction: column;
 }
+ 
+
+@media (max-width: 768px) {
+  
+  .appfile {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
